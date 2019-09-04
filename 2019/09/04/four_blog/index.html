@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+<title>2019/9/2 日常学习的一天 | Freespace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lazytom&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lazytom&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">2019/9/2 日常学习的一天</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Lazytom</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 4, 2019&nbsp;&nbsp;22:21:33</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>@<a href="目录">toc</a></p>
+<h1 id="①、程序流程图符号"><a href="#①、程序流程图符号" class="headerlink" title="①、程序流程图符号"></a>①、程序流程图符号</h1><p><img src="https://img-blog.csdnimg.cn/20190902171042741.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="程序流程图符号"></p>
+<h1 id="②、C-打印三角形"><a href="#②、C-打印三角形" class="headerlink" title="②、C++ 打印三角形"></a>②、C++ 打印三角形</h1><h2 id="1-指定五行直角三角形"><a href="#1-指定五行直角三角形" class="headerlink" title="1. 指定五行直角三角形"></a>1. 指定五行直角三角形</h2><p><strong>解题思想：</strong><br>&emsp;解决该题的主要难点在于每行的固定输出，那么如何让每行都能固定输出正好的 * 号呢？自然而然的就想到了循环，所以我在这里使用了两个for循环嵌套。<br>&emsp; 定义两个变量i和j，通过i来控制外层循环用于控制三角形的行数，通过j来控制内层循环完成每行固定星号的输出。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">	int i,j;</span><br><span class="line">	for (i=1;i&lt;=5;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j=1;j&lt;=i;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;&quot;*&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190902172405582.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="五行直角三角形"></p>
+<h2 id="2-由用户指定任意行的等腰三角形"><a href="#2-由用户指定任意行的等腰三角形" class="headerlink" title="2. 由用户指定任意行的等腰三角形"></a>2. 由用户指定任意行的等腰三角形</h2><p><strong>解题思想：</strong><br>&emsp;变量i配合变量n由用户输入控制总行数，根据要得到的图形规律可得：当前空格符数量 = 最大行号 - 当前行号，当前<em>符数量 = 当前行号 * 2 - 1，故设置以下说明：<br>&emsp; i行空格符数量 = 最大行号 - i<br>&emsp; i行</em>符数量 = i * 2 - 1<br>&emsp; i换行符数量:1</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void main()&#123;</span><br><span class="line">	int i,j,k,n;</span><br><span class="line">	cout&lt;&lt;&quot;请输入你想要的行数：&quot;;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	for(i = 1;i &lt;= n;i++ )&#123;  //该控制行决定了循环时的当前行号</span><br><span class="line">		for(j = 1;j &lt;= n-i;j++)&#123;  //该控制行决定了打印空格符的数量,i决定行号。</span><br><span class="line">			cout&lt;&lt;&quot; &quot;; </span><br><span class="line">		&#125;</span><br><span class="line">		for(k = 1;k &lt;= i*2-1;k++)&#123;  //该控制行决定了打印*符号的数量,i决定行号。</span><br><span class="line">			cout&lt;&lt;&quot;*&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl; //换行</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190902174100117.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="等腰三角形"></p>
+<h2 id="3-平行四边形式等腰三角形拆分"><a href="#3-平行四边形式等腰三角形拆分" class="headerlink" title="3.平行四边形式等腰三角形拆分"></a>3.平行四边形式等腰三角形拆分</h2><p><strong>解题思想：</strong><br>&emsp; 左边的三角形原理同2，利用for循环以及由用户输入的变量space来自主设置两个三角形之间的空格，而右边三角形则需要根据规律得出m=2*(n-1)，一般是看图，根据图片规律得出，故实现倒置输出。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">int main() &#123;</span><br><span class="line">int n,space;</span><br><span class="line">	cout &lt;&lt; &quot;请输入行数:&quot;;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	cout &lt;&lt; &quot;请输入间隔数:&quot;;</span><br><span class="line">	cin &gt;&gt; space;</span><br><span class="line">	cout &lt;&lt;  endl;</span><br><span class="line">	for (int i = 1; i &lt;= n; ++i) &#123;</span><br><span class="line">		// left</span><br><span class="line">		for (int k = 0; k &lt; n - i; ++k) &#123;</span><br><span class="line">			 cout &lt;&lt; &quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		for (int j = 0; j &lt; 2 * i - 1; ++j) &#123;</span><br><span class="line">			 cout &lt;&lt; &quot;*&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		// space</span><br><span class="line">		for (int l = 0; l &lt; space; ++l) &#123;</span><br><span class="line">			cout &lt;&lt; &quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		for (int m = 0; m &lt; 2 * (n - i) + 1; ++m) &#123;</span><br><span class="line">			 cout &lt;&lt; &quot;*&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		 cout &lt;&lt;  endl;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190902183355613.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019090218342778.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="4-菱形"><a href="#4-菱形" class="headerlink" title="4.菱形"></a>4.菱形</h2><p><strong>解题思路：</strong><br>&emsp;思路和等腰三角形基本一致，无非就是在正面输出一遍后，再加一个循环嵌套倒置输出。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">void main()&#123;</span><br><span class="line">	int i,j,k,n;</span><br><span class="line">	cout&lt;&lt;&quot;请输入你想要的行数：&quot;;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	for(i = 1;i &lt;= n;i++ )&#123;  //该控制行决定了循环时的当前行号</span><br><span class="line">		for(j = 1;j &lt;= n-i;j++)&#123;  //该控制行决定了打印空格符的数量,i决定行号。</span><br><span class="line">			cout&lt;&lt;&quot; &quot;; </span><br><span class="line">		&#125;</span><br><span class="line">		for(k = 1;k &lt;= i*2-1;k++)&#123;  //该控制行决定了打印*符号的数量,i决定行号。</span><br><span class="line">			cout&lt;&lt;&quot;*&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl; //每行打印一个换行</span><br><span class="line">	&#125;</span><br><span class="line">	for (i = n - 2; i &gt;= 0; i--)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 1; j &lt;n-i; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;&quot; &quot;; </span><br><span class="line">		&#125;</span><br><span class="line">		for (j = 0; j &lt; 2 * i + 1; j++)</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;&quot;*&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/2019090218580980.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="菱形"></p>
+<h1 id="③、C-九九乘法表"><a href="#③、C-九九乘法表" class="headerlink" title="③、C++ 九九乘法表"></a>③、C++ 九九乘法表</h1><h2 id="1-简单版九九乘法表"><a href="#1-简单版九九乘法表" class="headerlink" title="1.简单版九九乘法表"></a>1.简单版九九乘法表</h2><p><strong>解题思路：</strong><br>&emsp; 超级简单！一如既往的for循环嵌套，形式如1 x 1,1 x 2,1 x 3,1 x 4……循环到9，其它的也都是这样的思想。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">	int i,j,n;</span><br><span class="line">	for (i=1;i&lt;=9;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j=1;j&lt;=9;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			n=i*j;</span><br><span class="line">			cout&lt;&lt;i&lt;&lt;&quot;*&quot;&lt;&lt;j&lt;&lt;&quot;=&quot;&lt;&lt;n&lt;&lt;&quot; &quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;endl;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/2019090219060282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="简单版九九乘法表"></p>
+<h2 id="2-精美格式版九九乘法表"><a href="#2-精美格式版九九乘法表" class="headerlink" title="2.精美格式版九九乘法表"></a>2.精美格式版九九乘法表</h2><p><strong>解题思路</strong><br>&emsp; 依旧是很简单的思路，外层循环和之前一样，内层循环条件改成i值，这样就可以有效的避免了重复相乘的出现。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">void main()</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">	for (int i = 1; i &lt;= 9; i++)//外层循环9次</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		//内层循环负责打印信息到屏幕上</span><br><span class="line">		for (int j=1;j&lt;=i;j++)</span><br><span class="line"></span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; &quot;x&quot; &lt;&lt; j &lt;&lt;&quot;=&quot;&lt;&lt; i*j &lt;&lt; &quot;\t&quot;;</span><br><span class="line">		&#125;</span><br><span class="line">		//内层循环结束后打印一个回车换行</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	system(&quot;pause&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190902191538116.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="精美九九乘法表"></p>
+<h1 id="④、求100-200之间不能被3整除的数"><a href="#④、求100-200之间不能被3整除的数" class="headerlink" title="④、求100~200之间不能被3整除的数"></a>④、求100~200之间不能被3整除的数</h1><p><strong>解题思想：</strong><br>&emsp;该题特别简单，一个循环，一个条件，即可解决，方法也同样适用于其它的数。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void main()&#123;</span><br><span class="line">	int n;</span><br><span class="line">	for (n=100;n&lt;=200;n++)</span><br><span class="line">	&#123;</span><br><span class="line">		if(n%3!=0)</span><br><span class="line">			cout&lt;&lt;n&lt;&lt;&quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190903161233785.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="⑤、输出100以内所有的素数"><a href="#⑤、输出100以内所有的素数" class="headerlink" title="⑤、输出100以内所有的素数"></a>⑤、输出100以内所有的素数</h1><p><strong>解题思想：</strong><br>&emsp;两个循环嵌套，两个if语句，一个标记变量，外部循环负责从1遍历到100，内部循环负责从2遍历到i值，标记变量flag负责记录一旦内部循环if条件语句成立，则变值，使该值无法输出，达到只输出素数的目的。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">void main()</span><br><span class="line">&#123;</span><br><span class="line">	int i;</span><br><span class="line">	for(i=1;i&lt;=100;i++)&#123;</span><br><span class="line">		bool flag=true;</span><br><span class="line">		for(int j=2;j&lt;i;j++)&#123;</span><br><span class="line">			if(i%j==0)&#123;</span><br><span class="line">				flag=false;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		if(flag==true)</span><br><span class="line">		cout&lt;&lt;i&lt;&lt;&quot; &quot;;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190903164445595.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="100以内的素数"></p>
+<h1 id="⑥、判断一个正整数是不是素数"><a href="#⑥、判断一个正整数是不是素数" class="headerlink" title="⑥、判断一个正整数是不是素数"></a>⑥、判断一个正整数是不是素数</h1><p><strong>解题思想：</strong><br>&emsp;既然是判断一个正整数是不是素数，那么我认为加入一个判断用户输入的数是不是正整数的判断条件是很有必要的，通过while循环来判断是否需要重新输入。而判断正整数是不是素数部分和判断100以内的所有素数的方式方法基本一致，无非就是从2到i值，判断i值和j值取余是否为0，为0则不为素数，不为0则为素数。</p>
+<p><strong>代码实现：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">void main()&#123;</span><br><span class="line">	int i,j;</span><br><span class="line">	cout&lt;&lt;&quot;请输入一个正整数：&quot;;</span><br><span class="line">	cin&gt;&gt;i;</span><br><span class="line">	while(i&lt;=0)&#123;</span><br><span class="line">		cout&lt;&lt;&quot;该数不是正整数，请重新输入：&quot;;</span><br><span class="line">		cin&gt;&gt;i;</span><br><span class="line">	&#125;</span><br><span class="line">	for (j=2;j&lt;i;j++)</span><br><span class="line">	&#123;</span><br><span class="line">		if (i%j==0)</span><br><span class="line">		&#123;</span><br><span class="line">			cout&lt;&lt;i&lt;&lt;&quot;不是素数&quot;&lt;&lt;endl;</span><br><span class="line">			break;</span><br><span class="line">		&#125;else&#123;</span><br><span class="line">			cout&lt;&lt;i&lt;&lt;&quot;是素数&quot;&lt;&lt;endl;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果图展示：</strong><br><img src="https://img-blog.csdnimg.cn/20190903170019550.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="判断素数"></p>
+<h1 id="⑦、a-3-a-gt-a-a-3-a"><a href="#⑦、a-3-a-gt-a-a-3-a" class="headerlink" title="⑦、a * =3 + a  =&gt;  a = a * (3+a)"></a>⑦、a * =3 + a  =&gt;  a = a * (3+a)</h1><br>
+
+<h1 id="⑧、C语言的连续赋值问题"><a href="#⑧、C语言的连续赋值问题" class="headerlink" title="⑧、C语言的连续赋值问题"></a>⑧、C语言的连续赋值问题</h1><p>&emsp;由于在赋值符“=”右边的表达式也可以又是一个赋值表达式， 因此，下述形式 变量=(变量=表达式); 是成立的，从而形成 嵌套的情形。 其展开之后的一般形式为：变量=变量=…=表达式; 例如： <strong>a=b=c=d=e=5;</strong> 按照赋值运算符的<strong>右接合性</strong>，因此实际上等效于<strong>： e=5; d=e; c=d; b=c; a=b;</strong></p>
+<p>&emsp;注意在变量说明中给变量赋初值和赋值语句的区别。 给变量赋初值是变量说明的一部分，赋初值后的变量与其后的其它同类变量之间仍必须用逗号间隔，而赋值语句则必须用分号结尾。 例如： int a=5,b,c;</p>
+<p>&emsp;<strong>在变量说明中，不允许连续给多个变量赋初值。</strong> 如下述说明是错误的： int a=b=c=5 必须写为 int a=5,b=5,c=5; 而赋值语句允许连续赋值。</p>
+<p>&emsp;注意赋值表达式和赋值语句的区别。 赋值表达式是一种表达式，它可以出现在任何允许表达式出现的地方，而赋值语句则不能。</p>
+<p><strong>参考资料：</strong><br><a href="https://blog.csdn.net/weixin_38239856/article/details/69922289" target="_blank" rel="noopener">【独孤星燎】C语言中赋值语句规则</a></p>
+<h1 id="⑨、C语言位运算"><a href="#⑨、C语言位运算" class="headerlink" title="⑨、C语言位运算"></a>⑨、C语言位运算</h1><p>&emsp;程序中的所有数在计算机内存中都是以二进制的形式储存的。位运算就是直接对整数在内存中的二进制位进行操作。比如，and运算本来是一个逻辑运算符，但整数与整数之间也可以进行and运算。举个例子，6的二进制是110，11的二进制是1011，那么6 and 11的结果就是2，它是二进制对应位进行逻辑运算的结果（0表示False，1表示True，空位都当0处理）。<br><img src="https://img-blog.csdnimg.cn/20190903172400354.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="符号图"><br><strong>参考资料：</strong><br><a href="https://baike.baidu.com/item/%E4%BD%8D%E8%BF%90%E7%AE%97/6888804?fr=aladdin" target="_blank" rel="noopener">【百度百科】位运算</a></p>
+<h1 id="⑩、C语言逗号表达式"><a href="#⑩、C语言逗号表达式" class="headerlink" title="⑩、C语言逗号表达式"></a>⑩、C语言逗号表达式</h1><p>&emsp;c语言提供一种特殊的运算符，逗号运算符，优先级别最低，它将两个及其以上的式子联接起来，从左往右逐个计算表达式，整个表达式的值为最后一个表达式的值。如：（3+5,6+8）称为逗号表达式，其求解过程先表达式1，后表达式2，整个表达式值是表达式2的值，如：（3+5，6+8）的值是14；a=(a=3<em>5,a</em>4)的值是60，其中（a=3<em>5,a</em>4）的值是60， a的值在逗号表达式里一直是15，最后被逗号表达式赋值为60，a的值最终为60。</p>
+<p><strong>表达式说明</strong><br>&emsp;表达式1，表达式2，表达式3，…… ，表达式n<br>&emsp;逗号表达式的要领：<br>&emsp;(1) 逗号表达式的运算过程为：从左往右逐个计算表达式。<br>&emsp;(2) 逗号表达式作为一个整体，它的值为最后一个表达式（也即表达式n）的值。<br>&emsp;(3) 逗号运算符的优先级别在所有运算符中最低。</p>
+<p><strong>例题：</strong><br><img src="https://img-blog.csdnimg.cn/20190903173114942.png" alt="例题"><br>正确结果为x=2,y=3,z=1<br><strong>解题思路：</strong><br>&emsp;由于赋值运算符的优先级是14，而逗号表达式的优先级是15，也就是说上面的表达式中应该等价于这样的结合：(z=x++),y++,++y;如果这样写的话，则答案很清晰，为：2，3，1</p>
+<p><strong>参考资料：</strong><br><a href="https://baike.baidu.com/item/%E9%80%97%E5%8F%B7%E8%A1%A8%E8%BE%BE%E5%BC%8F/4496335?fr=aladdin" target="_blank" rel="noopener">【百度百科】逗号表达式</a></p>
+<h1 id="⑪、C语言混合类型表达式的类型确定"><a href="#⑪、C语言混合类型表达式的类型确定" class="headerlink" title="⑪、C语言混合类型表达式的类型确定"></a>⑪、C语言混合类型表达式的类型确定</h1><h2 id="同类型："><a href="#同类型：" class="headerlink" title="同类型："></a>同类型：</h2><p><img src="https://img-blog.csdnimg.cn/20190903173942396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="同类型"><br><img src="https://img-blog.csdnimg.cn/20190903174217351.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="自动类型转换"><a href="#自动类型转换" class="headerlink" title="自动类型转换"></a>自动类型转换</h2><p><img src="https://img-blog.csdnimg.cn/20190903174254832.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190903174326839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h2><p><img src="https://img-blog.csdnimg.cn/20190903174409471.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019090317442410.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="⑫、C语言运算符优先级"><a href="#⑫、C语言运算符优先级" class="headerlink" title="⑫、C语言运算符优先级"></a>⑫、C语言运算符优先级</h1><p><img src="https://img-blog.csdnimg.cn/20190903174854943.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190903174917818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;同一优先级的运算符，运算次序由结合方向所决定。</p>
+<p>&emsp;<strong>简单记就是：！ &gt; 算术运算符 &gt; 关系运算符 &gt; &amp;&amp; &gt; || &gt; 赋值运算符</strong></p>
+<p>&emsp;C语言中，运算符的运算优先级共分为15级。1级最高，15级最低。在表达式中，优先级较高的先于优先级较低的进行运算。 而在一个运算量两侧的运算符优先级相同时， 则按运算符的结合性所规定的结合方向处理。 C语言中各运算符的结合性分为两种，即左结合性(自左至右)和右结合性(自右至左)。例如算术运算符的结合性是自左至右，即先左后右。如有表达式x-y+z则y应先与“-”号结合， 执行x-y运算，然后再执行+z的运算。这种自左至右的结合方向就称为“左结合性”。而自右至左的结合方向称为“右结合性”。 最典型的右结合性运算符是赋值运算符。如x=y=z,由于“=”的右结合性，应先执行y=z再执行x=(y=z)运算。 C语言运算符中有不少为右结合性，应注意区别，以避免理解错误。</p>
+<h1 id="⑬、break与continue的区别"><a href="#⑬、break与continue的区别" class="headerlink" title="⑬、break与continue的区别"></a>⑬、break与continue的区别</h1><p>　&emsp;break和continue都可在循环语句里面使用，也都可以控制外层的循环。但是continue只能在循环语句里面使用，break也可以使用在switch语句里面。</p>
+<p>&emsp;break具体作用在循环语句中的具体作用是，跳出当前循环，当然还可以跳出所有的循环。当前循环中break语句之后的语句都不会执行。</p>
+<p><strong>参考资料</strong><br><a href="https://www.cnblogs.com/yxiaooutlook/p/7679890.html" target="_blank" rel="noopener">【博客园】break与continue的区别</a></p>
+<h1 id="⑭、C语言的输入输出"><a href="#⑭、C语言的输入输出" class="headerlink" title="⑭、C语言的输入输出"></a>⑭、C语言的输入输出</h1><p><img src="https://img-blog.csdnimg.cn/20190903180257221.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="⑮、C语言格式说明符"><a href="#⑮、C语言格式说明符" class="headerlink" title="⑮、C语言格式说明符"></a>⑮、C语言格式说明符</h1><p><img src="https://img-blog.csdnimg.cn/20190903180743146.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/2019090318082445.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190903180848839.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190903180914870.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="⑯、机器数的表示"><a href="#⑯、机器数的表示" class="headerlink" title="⑯、机器数的表示"></a>⑯、机器数的表示</h1><p><img src="https://img-blog.csdnimg.cn/20190903180434665.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt></p>
+<h1 id="⑰、Moore定律"><a href="#⑰、Moore定律" class="headerlink" title="⑰、Moore定律"></a>⑰、Moore定律</h1><p>&emsp;1965 年，英特尔联合创始人戈登·摩尔提出以自己名字命名的「摩尔定律」，意指集成电路上可容纳的元器件的数量每隔 18 至 24 个月就会增加一倍，性能也将提升一倍。换言之，每一美元所能买到的电脑性能，将每隔18-24个月翻一倍以上。这一定律揭示了信息技术进步的速度。<br><img src="https://img-blog.csdnimg.cn/20190903181136460.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h1 id="⑱、总线"><a href="#⑱、总线" class="headerlink" title="⑱、总线"></a>⑱、总线</h1><p>&emsp;总线（Bus）是计算机各种功能部件之间传送信息的公共通信干线，它是由导线组成的传输线束， 按照计算机所传输的信息种类，计算机的总线可以划分为数据总线、地址总线和控制总线，分别用来传输数据、数据地址和控制信号。总线是一种内部结构，它是cpu、内存、输入、输出设备传递信息的公用通道，主机的各个部件通过总线相连接，外部设备通过相应的接口电路再与总线相连接，从而形成了计算机硬件系统。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Lazytom</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://yoursite.com/2019/09/04/four_blog/">http://yoursite.com/2019/09/04/four_blog/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+            
+            <a class="next" rel="next" href="/2019/09/04/three_blog/">2019/8/29 日常学习的一天</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Lazytom | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

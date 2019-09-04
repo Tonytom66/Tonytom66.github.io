@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+<title>2019/8/29 日常学习的一天 | Freespace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lazytom&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lazytom&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">2019/8/29 日常学习的一天</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Lazytom</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 4, 2019&nbsp;&nbsp;22:21:21</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>@<a href="目录">TOC</a></p>
+<h1 id="①、c语言单精度和双精度的区别"><a href="#①、c语言单精度和双精度的区别" class="headerlink" title="①、c语言单精度和双精度的区别"></a>①、c语言单精度和双精度的区别</h1><p><strong>单精度，1位符号，8位指数，23位小数。</strong><br><img src="https://img-blog.csdnimg.cn/20190830165026983.png" alt="单精度"></p>
+<p><strong>双精度是1位符号，11位指数，52位小数。</strong><br><img src="https://img-blog.csdnimg.cn/20190830180030498.png" alt="双精度"><br>&emsp;单精度浮点数用4字节存储， [1]  双精度浮点数用8字节存储，分为三个部分：<strong>符号位、阶和尾数</strong>。阶即指数，尾数即有效小数位数。单精度格式阶占8位，尾数占24位，符号位1位，双精度则为11为阶，53位尾数和1位符号位。</p>
+<p>&emsp;细心的人会发现，单双精度各部分所占字节数量比实际存储格式多了一位，的确是这样，事实是，尾数部分包括了一位隐藏位，允许只存储23位就可以表示24位尾数，默认的1位是规格化浮点数的第一位，当规格化一个浮点数时，总是调整它使其值大于等于1而小于2，亦即个位总是为1。例如1100B，对其规格化的结果为1.1乘以2的三次方，但个位1并不存储在23位尾数部分内，这个1是默认位。</p>
+<p>&emsp;阶以移码的形式存储。对于单精度浮点数，偏移量为127（7FH），而双精度的偏移量为1023（3FFH）。存储浮点数的阶码之前，偏移量要先加到阶码上。前面例子中，阶为2的三次方，在单精度浮点数中，移码后的结果为127+3即130（82H），双精度为1026（402H）。</p>
+<p><strong>double和fioat区别：</strong><br><img src="https://img-blog.csdnimg.cn/20190830181037981.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>&emsp;float表示单精度浮点数在机内占4个字节，用32位二进制描述。 float型定义的数据末尾必须有”f”或”F”,以示区分。<br>double表示双精度浮点数在机内占8个字节，用64位二进制描述。</p>
+<p>&emsp;对编程人员来说，double 和 float 的区别是double精度高，有效数字16位，float精度7位。但double消耗内存是float的两倍，double的运算速度比float慢得多，java语言中数学函数名称double 和 float不同，不要写错，能用单精度时不要用双精度（以省内存，加快运算速度）。</p>
+<h1 id="②、ASCII-Table"><a href="#②、ASCII-Table" class="headerlink" title="②、ASCII Table"></a>②、ASCII Table</h1><p><img src="https://img-blog.csdnimg.cn/2019083020570780.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="控制字符"><br><img src="https://img-blog.csdnimg.cn/20190830210205730.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="可显示字符"></p>
+<h1 id="③、数据溢出问题"><a href="#③、数据溢出问题" class="headerlink" title="③、数据溢出问题"></a>③、数据溢出问题</h1><p>&emsp;当变量的数据类型所提供的位数无法适应某个值时，就会发生溢出（上溢）或下溢。就像往水桶里装水，水满则溢，变量也是这样，如果要存储的值超过了变量所能提供的位数，就会出现问题。</p>
+<p>&emsp;不妨来看一个例子，假设在一个使用了 2 个字节内存的 short int 类型变量中存储了以下值：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190830211526544.png" alt="在这里插入图片描述"><br>&emsp;这是 32 767 的二进制表示，也是能存储在该数据类型中的最大值。这里先不讲负数如何存储的细节，只要知道 short int 数据类型既可以存储正数也可以存储负数就可以了。高阶位(即最左侧位）是 0 的数字被解释为正数，高阶位为 1 的数字则被解释为负数。</p>
+<p>&emsp;如果上面示例中存储的数字加 1，则该变量将变成以下位模式：<br><img src="https://img-blog.csdnimg.cn/20190830211540552.png" alt="在这里插入图片描述"><br>&emsp;但这不是 32 768。相反，它被解释为负数，所以这不是预期的结果。二进制 1 已经“流入”到高阶位的位置，这就是所谓的溢出（上溢）。</p>
+<p>&emsp;同样地，当一个整数变量保存的数值在其数据类型负值范围的最远端（即最小负值），那么当它被减去 1 时，其高位中的 1 将变为 0，结果数将被解释为正数。这是溢出的另一个例子。</p>
+<p>&emsp;除了溢出以外，浮点值还会遇到下溢的情况。当一个值太接近于零时，就可能会发生这种问题，过小的数字需要更多数位的精度来表示它，因而无法存储在保存它的变量中。</p>
+<h1 id="④、数组越界问题"><a href="#④、数组越界问题" class="headerlink" title="④、数组越界问题"></a>④、数组越界问题</h1><p>&emsp;所谓的数组越界，简单地讲就是指数组下标变量的取值超过了初始定义时的大小，导致对数组元素的访问出现在数组的范围之外，这类错误也是 C 语言程序中最常见的错误之一。</p>
+<p>&emsp;在 C 语言中，数组必须是静态的。换而言之，数组的大小必须在程序运行前就确定下来。由于 C 语言并不具有类似 Java 等语言中现有的静态分析工具的功能，可以对程序中数组下标取值范围进行严格检查，一旦发现数组上溢或下溢，都会因抛出异常而终止程序。也就是说，C 语言并不检验数组边界，数组的两端都有可能越界，从而使其他变量的数据甚至程序代码被破坏。</p>
+<p>&emsp;因此，数组下标的取值范围只能预先推断一个值来确定数组的维数，而检验数组的边界是程序员的职责。</p>
+<p>&emsp;一般情况下，数组的越界错误主要包括两种：数组下标取值越界与指向数组的指针的指向范围越界。</p>
+<p><strong>参考资料</strong><br><a href="http://c.biancheng.net/view/366.html" target="_blank" rel="noopener">【C语言中文网】数组越界及其避免方法，C语言数组越界详解</a></p>
+<h1 id="⑤、C语言转义字符"><a href="#⑤、C语言转义字符" class="headerlink" title="⑤、C语言转义字符"></a>⑤、C语言转义字符</h1><p>&emsp;字符集（Character Set）为每个字符分配了唯一的编号，我们不妨将它称为编码值。在C语言中，一个字符除了可以用它的实体（也就是真正的字符）表示，还可以用编码值表示。这种使用编码值来间接地表示字符的方式称为转义字符（Escape Character）。</p>
+<p>&emsp;转义字符以\或者\x开头，以\开头表示后跟八进制形式的编码值，以\x开头表示后跟十六进制形式的编码值。对于转义字符来说，只能使用八进制或者十六进制。<br><img src="https://img-blog.csdnimg.cn/20190830212152337.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="转移字符表"><br><strong>参考资料</strong><br><a href="http://c.biancheng.net/view/1769.html" target="_blank" rel="noopener">【C语言中文网】C语言转义字符</a></p>
+<h1 id="⑥、原码反码补码"><a href="#⑥、原码反码补码" class="headerlink" title="⑥、原码反码补码"></a>⑥、原码反码补码</h1><p>下图给出带符号位四位二进制的补码表示法<br><img src="https://img-blog.csdnimg.cn/20190830212638638.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="补码图"><br><strong>参考资料</strong><br><a href="https://blog.csdn.net/zhiwen_a/article/details/81192087" target="_blank" rel="noopener">【JavenLaw】原码，反码，补码的深入理解与原理</a></p>
+<h1 id="⑦、分量运算符-gt"><a href="#⑦、分量运算符-gt" class="headerlink" title="⑦、分量运算符 -&gt;"></a>⑦、分量运算符 -&gt;</h1><p>&emsp;是(<em>).的缩写，如p-&gt;m 等价于 (</em>p).m<br>&emsp;叫“分量”可能是因为视p为一结构（指针），m为其一域（分量），此运算符由p得到其分量m值。</p>
+<h1 id="⑧、自增自减"><a href="#⑧、自增自减" class="headerlink" title="⑧、自增自减"></a>⑧、自增自减</h1><p><img src="https://img-blog.csdnimg.cn/20190830214224210.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="程序理解"><br>【解析】：<br>&emsp; i=2;j=6;k=6<br><strong>i:</strong> 经过三次自增以及三次自减，所以i值不变<br><strong>j：</strong> i++是先引用，后增加，所以 j=2+2+2=6<br><strong>k:</strong> –i是先减少，后引用，所以i值经过三次减少为2，所以k也等于2+2+2，故为6</p>
+<p><strong>eg:</strong><br>&emsp;int i=3;k=(++i)+(++i)+(i++);<br>&emsp;k=15,i=6;<br>&emsp;int i=3;k=(++i)+(++i)+(++i);<br>&emsp;k=18,i=6<br>&emsp;int i=3;k=(i++)+(i++)+(i++);<br>&emsp;k=9,i=6i=6不管哪种，i都是加了三次，由3到最后的6</p>
+<p>&emsp;主要区别在于 <strong>i++是先运算，后执行i=i+1</strong> &emsp;<strong>++i是先执行i=i+1,后运算</strong><br>&emsp;所以第一个先执行了两次i=i+1后i=5,三个相加后结果是15，然后再加1，i＝6<br>&emsp;第二个是执行了三次i=i+1后i=6,三个相加后结果是18<br>&emsp;第三个是先执行相加，结果为9，后执行三次i=i+1，i＝6</p>
+<p><strong>ps:</strong><br><strong>C语言中的 i++ 和 ++i 的区别</strong></p>
+<p>i++和++i的区别就是：</p>
+<p>&emsp;i++ ：先引用，后增加<br>&emsp;++i ：先增加，后引用</p>
+<p>换句话就是：<br>&emsp;i++ : 先在i所在的表达式中使用i的当前值，再让i加1</p>
+<p>&emsp;++i : 先让i加1，再在i所在的表达式中使用i的新值</p>
+<p>取决于＋＋和i的相对位置：<br>&emsp;＋＋在i前面，i先加1，然后在表达式中用i的值；＋＋在i后面，先在表达式中用i的值，然后i再加1。</p>
+<p>例如：<br>1、i ++:<br>&emsp;int i = 0;<br>while (i &lt; 10) {<br>&emsp;i ++;<br>}</p>
+<p>2、++i:<br>&emsp;int i = 0;<br>&emsp;while (i &lt; 10) {<br>&emsp;++ i;<br>}</p>
+<p>1与2，经过运算后，i的值都是10。在while和for循环中的 ++i 和 i++ 是没有区别的。</p>
+<h1 id="⑨、重写与重载的区别"><a href="#⑨、重写与重载的区别" class="headerlink" title="⑨、重写与重载的区别"></a>⑨、重写与重载的区别</h1><p>重载（Overload）重写（Override）<br>&emsp;方法的重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载发生在一个类中，同名的方法如果有不同的参数列表（参数类型不同、参数个数不同或者二者都不同）则视为重载；重写发生在子类与父类之间，重写要求子类被重写方法与父类被重写方法有相同的参数列表，有兼容的返回类型，比父类被重写方法更好访问，不能比父类被重写方法声明更多的异常（里氏代换原则）。重载对返回类型没有特殊的要求，不能根据返回类型进行区分。</p>
+<h1 id="⑩、软件研发的生命周期"><a href="#⑩、软件研发的生命周期" class="headerlink" title="⑩、软件研发的生命周期"></a>⑩、软件研发的生命周期</h1><p><img src="https://img-blog.csdnimg.cn/20190830220913566.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20190830221459312.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="生命周期图"></p>
+<h1 id="⑪、软件开发模型"><a href="#⑪、软件开发模型" class="headerlink" title="⑪、软件开发模型"></a>⑪、软件开发模型</h1><p>&emsp;典型的开发模型有：1. 边做边改模型（Build-and-Fix Model）；2. 瀑布模型（Waterfall Model）；3. 快速原型模型（Rapid Prototype Model）；4. 增量模型（Incremental Model）；5.螺旋模型（Spiral Model）；6.演化模型(evolution model)；7.喷泉模型(fountain model)；8.智能模型(四代技术（4GL）)；9.混合模型（hybrid model）；10.RAD模型；<br><img src="https://img-blog.csdnimg.cn/20190830221727984.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190830221743929.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190830221757717.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190830221808525.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190830221819254.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong>参考资料</strong><br><a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B/223381?fr=aladdin" target="_blank" rel="noopener">【百度百科】软件开发模型</a></p>
+<h1 id="⑫、思考题"><a href="#⑫、思考题" class="headerlink" title="⑫、思考题"></a>⑫、思考题</h1><h2 id="1、在软件系统的建模过程中，问题域指的是什么？"><a href="#1、在软件系统的建模过程中，问题域指的是什么？" class="headerlink" title="1、在软件系统的建模过程中，问题域指的是什么？"></a>1、在软件系统的建模过程中，问题域指的是什么？</h2><p>软件系统所要解决的现实世界中问题的领域为“问题域”，如“银行业务”属于“银行的问题域”。</p>
+<h2 id="2、OOA和OOD的主要工作各自是什么？"><a href="#2、OOA和OOD的主要工作各自是什么？" class="headerlink" title="2、OOA和OOD的主要工作各自是什么？"></a>2、OOA和OOD的主要工作各自是什么？</h2><p>OOA面向对象的分析，其主要工作是研究问题域和用户需求，运用面向对象的观点和原则发现问题域中与系统责任有关的对象，以及对象的特征和相互关系。</p>
+<p>OOD面向对象的设计，其主要工作是以OOA模型为基础，按照实现的要求进行设计决策，包括系统设计和详细设计。</p>
+<h2 id="3、在面向对象方法中，系统设计和详细设计的主要工作各自是什么？"><a href="#3、在面向对象方法中，系统设计和详细设计的主要工作各自是什么？" class="headerlink" title="3、在面向对象方法中，系统设计和详细设计的主要工作各自是什么？"></a>3、在面向对象方法中，系统设计和详细设计的主要工作各自是什么？</h2><p>系统设计是设计系统蓝图</p>
+<p>详细设计是明确系统具体做什么。</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Lazytom</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://yoursite.com/2019/09/04/three_blog/">http://yoursite.com/2019/09/04/three_blog/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/09/04/four_blog/">2019/9/2 日常学习的一天</a>
+            
+            
+            <a class="next" rel="next" href="/2019/09/04/second_blog/">2019/8/28 日常学习的一天</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Lazytom | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

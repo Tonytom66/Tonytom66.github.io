@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+<title>2019/8/26 日常学习的一天 | Freespace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lazytom&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lazytom&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">2019/8/26 日常学习的一天</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Lazytom</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 4, 2019&nbsp;&nbsp;22:12:27</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>@<a href="目录">TOC</a></p>
+<h1 id="①、sizeof"><a href="#①、sizeof" class="headerlink" title="①、sizeof"></a>①、sizeof</h1><p>&emsp;sizeof 是一个关键字，它是一个编译时运算符，用于判断变量或数据类型的字节大小。<br>&emsp;sizeof 运算符可用于获取类、结构、共用体和其他用户自定义数据类型的大小。<br><strong>其作用是返回一个对象或类型所占的内存字节数</strong>。</p>
+<p>使用 sizeof 的语法如下：</p>
+<pre><code>    sizeof (data type)
+1）  sizeof (object);  //sizeof (对象)
+2）  sizeof object;   //sizeof 对象
+3）  sizeof (type_name);  //sizeof (类型)</code></pre><p>&emsp;其中，data type 是要计算大小的数据类型，包括类、结构、共用体和其他用户自定义数据类型。<br>&emsp;对象可以是各种类型的变量，以及表达式（一般sizeof不会对表达式进行计算）。<br>&emsp;sizeof对对象求内存大小，最终都是转换为对对象的数据类型进行求值。<br>&emsp;sizeof (表达式); //值为表达式的最终结果的数据类型的大小。</p>
+<p><strong>基本数据类型的sizeof</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   cout &lt;&lt; &quot;Size of char : &quot; &lt;&lt; sizeof(char) &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Size of int : &quot; &lt;&lt; sizeof(int) &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Size of short int : &quot; &lt;&lt; sizeof(short int) &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Size of long int : &quot; &lt;&lt; sizeof(long int) &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Size of float : &quot; &lt;&lt; sizeof(float) &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Size of double : &quot; &lt;&lt; sizeof(double) &lt;&lt; endl;</span><br><span class="line">   cout &lt;&lt; &quot;Size of wchar_t : &quot; &lt;&lt; sizeof(wchar_t) &lt;&lt; endl;</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Size of char : 1</span><br><span class="line">Size of int : 4</span><br><span class="line">Size of short int : 2</span><br><span class="line">Size of long int : 4</span><br><span class="line">Size of float : 4</span><br><span class="line">Size of double : 8</span><br><span class="line">Size of wchar_t : 4</span><br></pre></td></tr></table></figure>
+
+<p><strong>结构体、指针、数组、联合体、函数的sizeof暂不展示</strong></p>
+<p><strong>参考资料：</strong><br>&emsp;<a href="https://www.runoob.com/cplusplus/cpp-sizeof-operator.html" target="_blank" rel="noopener">【菜鸟教程】C++ sizeof 运算符</a><br>&emsp;<a href="https://www.cnblogs.com/huolong-blog/p/7587711.html" target="_blank" rel="noopener">【Mr.rong】c++中sizeof()的用法介绍</a><br><br></p>
+<h1 id="②、连续的三目条件语句"><a href="#②、连续的三目条件语句" class="headerlink" title="②、连续的三目条件语句"></a>②、连续的三目条件语句</h1><p><strong>三目运算符</strong><br>&emsp;对于条件表达式b ? x : y，先计算条件b，然后进行判断。如果b的值为true，计算x的值，运算结果为x的值；否则，计算y的值，运算结果为y的值。<br>&emsp;<strong>条件运算符是右结合的，也就是说，从右向左分组计算。</strong></p>
+<h2 id="例如，a-b-c-d-e将按a-b-c-d-e-执行。"><a href="#例如，a-b-c-d-e将按a-b-c-d-e-执行。" class="headerlink" title="例如，a ? b : c ? d : e将按a ? b : (c ? d : e)执行。"></a>例如，a ? b : c ? d : e将按a ? b : (c ? d : e)执行。</h2><p>&emsp;一般来说,三目运算符的结合性是右结合的，但是这点在ANSI C中并没有明确规定，所以它的执行顺序有时是由编译器决定的。</p>
+<p><strong>参考资料：</strong><br>&emsp;<a href="https://baike.baidu.com/item/%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6/6434591?fr=aladdin" target="_blank" rel="noopener">【百度百科】三目运算符</a><br><br></p>
+<h1 id="③、C-编程-杨辉三角"><a href="#③、C-编程-杨辉三角" class="headerlink" title="③、C++编程 杨辉三角"></a>③、C++编程 杨辉三角</h1><h2 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h2><p>&emsp;杨辉三角，是二项式系数在三角形中的一种几何排列。在欧洲，这个表叫做帕斯卡三角形。帕斯卡（1623—-1662）是在1654年发现这一规律的，比杨辉要迟393年，比贾宪迟600年。杨辉三角是中国古代数学的杰出研究成果之一，它把二项式系数图形化，把组合数内在的一些代数性质直观地从图形中体现出来，是一种离散型的数与形的结合。<img src="https://img-blog.csdnimg.cn/20190827090146967.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="杨辉三角展示图"><br><strong>杨辉三角的特点：</strong><br>&nbsp;<strong>（与上图中的n不同，这里第一行定义为n=1）</strong></p>
+<ol>
+<li>每个数等于它上方两数之和。</li>
+<li>每行数字左右对称，由1开始逐渐变大。</li>
+<li>第n行的数字有n项。</li>
+<li>前n行共[(1+n)n]/2 个数。</li>
+<li>第n行的m个数可表示为 C(n-1，m-1)，即为从n-1个不同元素中取m-1个元素的组合数。</li>
+<li>第n行的第m个数和第n-m+1个数相等 ，为组合数性质之一。</li>
+<li>每个数字等于上一行的左右两个数字之和。可用此性质写出整个杨辉三角。即第n+1行的第i个数等于第n行的第i-1个数和第i个数之和，这也是组合数的性质之一。即<br>C(n+1,i)=C(n,i)+C(n,i-1)。</li>
+<li>(a+b)n的展开式中的各项系数依次对应杨辉三角的第(n+1)行中的每一项。</li>
+<li>将第2n+1行第1个数，跟第2n+2行第3个数、第2n+3行第5个数……连成一线，这些数的和是第4n+1个斐波那契数；将第2n行第2个数(n&gt;1)，跟第2n-1行第4个数、第2n-2行第6个数……这些数之和是第4n-2个斐波那契数。<br>……</li>
+</ol>
+<p><strong>第一种实现形式：</strong><br>    【二维数组实现杨辉三角 输出10行】</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;iomanip&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">/*杨辉三角最终显示效果是一个等腰三角形，两个最外边都是1</span><br><span class="line">  杨辉三角的根本在于，每个数等于它上方两数之和</span><br><span class="line">*/</span><br><span class="line">int main()&#123;</span><br><span class="line">  const int n=11;//变量n在此处起到了限制输出行数的作用，可优化成用户输入</span><br><span class="line">  int i,j,a[n][n];</span><br><span class="line"></span><br><span class="line">  //使第一列和对角线元素的值为1</span><br><span class="line">  for (i=1;i&lt;n;i++)&#123;			//前两行全为1，拿出来单独处理</span><br><span class="line">	 a[i][i]=1;//使最右侧边全为1</span><br><span class="line">     a[i][1]=1;//使最左侧边全为1</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  //从第三行开始处理</span><br><span class="line">  for (i=3;i&lt;n;i++)				//三行开始出现变化</span><br><span class="line">    for (j=2;j&lt;=i-1;j++) //j始终慢i一步</span><br><span class="line">       a[i][j]=a[i-1][j-1]+a[i-1][j];//每个数等于它上方两数之和，如a32=a21+a22</span><br><span class="line"></span><br><span class="line">  //输出数组各元素的值</span><br><span class="line">  for (i=1;i&lt;n;i++)&#123;			//从第一行开始</span><br><span class="line">	 for (j=1;j&lt;=i;j++)			//利用j将每一行的数据全部输出</span><br><span class="line">       cout&lt;&lt;setw(5)&lt;&lt;a[i][j]&lt;&lt;&quot; &quot;;	//在C++中，setw(int n)用来控制输出间隔，这里是指前元素末尾与后元素末尾之间有个5空格位</span><br><span class="line">     cout&lt;&lt;endl;</span><br><span class="line">  &#125;</span><br><span class="line">  cout&lt;&lt;endl;</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果展示图</strong><br><img src="https://img-blog.csdnimg.cn/2019082709545671.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="编程效果图"></p>
+<p><strong>PS1：setw()函数的使用：</strong><br>&emsp;C++函数std::setw的行为与在流上调用n作为参数的成员宽度一样，它作为操纵器插入/提取（在输入流或输出流上插入/提取）。<br>&emsp;<strong>它用于设置要在输出操作上使用的字段宽度。</strong></p>
+<p><strong>特点：</strong></p>
+<ol>
+<li>setw（）是C ++中的库函数。</li>
+<li>setw（）在#include &lt;iomanip.&gt;中声明</li>
+<li>setw（）将设置字段宽度。</li>
+<li>setw（）设置要用作 下一个插入操作的字段宽度的字符数  。<br><img src="https://img-blog.csdnimg.cn/20190827094015921.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="setw()效果展示图"><br><strong>参考资料：</strong><br>&emsp;<a href="http://www.c4learn.com/cplusplus/cpp-setw-setting-field-width/" target="_blank" rel="noopener">【C4learn.com】C ++ setw（）：设置字段宽度</a></li>
+</ol>
+<p><strong>PS2：<em>std是什么意思？</em></strong><br>&emsp;在C++中，std其实就是standard标准的意思，std是一个类（输入输出标准），它包括了cin成员和cout成员，using name space std ;以后才能使用它的成员。<br><strong>&emsp;例如std::cin就是标准输入，std::cout就是标准输出的意思。</strong><br>&emsp;#include &lt;iostream.&gt;,它包含了一个类，在类的使用之前要预处理一下，using namespace std;就是这个功能，然后你就可以使用cin,cout这两个成员函数了，假设你不使用预处理（using namespace std;),就需要加上加上std::cin或者std::cout再去使用它的成员函数。</p>
+<p>&emsp;&emsp;&emsp;<strong>参考资料：</strong><br>&emsp;&emsp;&emsp;&emsp;<a href="https://zhidao.baidu.com/question/302553183.html" target="_blank" rel="noopener">【百度知道】C++中”std::”是什么意思?</a><br><br></p>
+<p><strong>第二种实现形式：</strong><br>    【指针动态开辟空间，一维数组实现杨辉三角 输出任意行】<br>    &emsp;<strong>该方法使用灵活，但是理解略显困难。</strong><br><img src="https://img-blog.csdnimg.cn/20190827104845122.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="杨辉三角"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;iomanip&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int* YangHuiData(int n); //n是杨辉三角形的行数 </span><br><span class="line">void YangHuiShow(int *pData, int n);//在屏幕上打印杨辉三角形 </span><br><span class="line">int main() &#123;</span><br><span class="line">	int n;</span><br><span class="line">	cout &lt;&lt; &quot;请输入杨辉三角形的行数&quot;;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	//计算杨辉三角并保存到二维数组</span><br><span class="line">	int *pData = YangHuiData(n);</span><br><span class="line">	//在屏幕上打印等腰三角形的杨辉三角 </span><br><span class="line">	YangHuiShow(pData, n);</span><br><span class="line">	//n是杨辉三角形的行数 </span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">int* YangHuiData(int n) &#123;</span><br><span class="line">	int *a = new int[n*n]; ////用指针a指向new动态分配的长度为(n*n)*sizeof(int)的内存空间 </span><br><span class="line"></span><br><span class="line">	//完成杨辉三角形的计算，没有显示的位置填0 </span><br><span class="line">	int i, j;</span><br><span class="line">	for (i = 0; i&lt;n*n; i++) &#123;</span><br><span class="line">		a[i] = 0;			//填0操作		</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	a[0] = 1;</span><br><span class="line">	a[n] = 1;</span><br><span class="line">	a[n + 1] = 1;</span><br><span class="line"> </span><br><span class="line">	for (i = 2; i&lt;n; i++) &#123;</span><br><span class="line">		a[i*n] = 1;</span><br><span class="line">		a[i*n + i] = 1;</span><br><span class="line">		for (j = 1; j&lt;i; j++) &#123;</span><br><span class="line">			a[i*n + j] = a[(i - 1)*n + j - 1] + a[(i - 1)*n + j]; //通过a[i*n+j]来访问第(i*n+j)个数据,根据杨辉三角的特性求值</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line">	return a;</span><br><span class="line">&#125;</span><br><span class="line">void YangHuiShow(int *a, int n) &#123;</span><br><span class="line">	//根据数据a指向的二维数组在屏幕上打印 </span><br><span class="line">	//杨辉三角形，每行前面填充合适的空格 </span><br><span class="line">	//以显示成等腰三角形，左右对称 </span><br><span class="line">	int i, j;</span><br><span class="line">	for (i = 0; i&lt;n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		for (j = 0; j&lt;n - i - 1; j++)</span><br><span class="line">			cout &lt;&lt; setw(3) &lt;&lt; &quot; &quot;;//前导空格，为单个数据的一半宽度  </span><br><span class="line">		for (j = 0; j &lt;= i; j++)</span><br><span class="line">			cout &lt;&lt; setw(6) &lt;&lt; a[i*n + j];</span><br><span class="line">		cout &lt;&lt; endl;</span><br><span class="line">	&#125;在这里插入图片描述</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>代码分析图（以3x3为例）</strong><br><img src="https://img-blog.csdnimg.cn/20190827160659623.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="3x3代码分析图"><br><strong>效果展示图</strong><br><img src="https://img-blog.csdnimg.cn/20190827160755199.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="yanghuihanshu效果展示图"></p>
+<p><strong>PS3：C++中如何正确的开辟一个动态的二维数组：</strong><br><img src="https://img-blog.csdnimg.cn/20190827160944478.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="图片展示"><br><strong>两种定义二维数组的方式，访问数据的方式，优缺点：</strong></p>
+<p><strong>方法一：</strong></p>
+<pre><code>定义方式：
+int **p=new int*[10];
+for (int i=0;i&lt;=10;++i)
+       {
+              p[i]=new int[10];
+        }
+
+访问数据的方式：直接通过a[i][j]访问第i行第j列的数据。
+优缺点：通过a[i][j]访问数据容易，但是new的次数太多，释放空间不容易。</code></pre><p><strong>方法二：</strong></p>
+<pre><code>定义方式：
+
+ int *p=new int[10*10];(ps:这种事当成一维数组连续开辟的。）
+
+ 访问数据的方式：通过a[i*10+j]来访问第(i*10+j)个数据。
+ 优缺点：访问数据很方便，且new的次数少，释放空间容易，但是不便于理解。</code></pre><p><img src="https://img-blog.csdnimg.cn/20190827161352566.png" alt="在这里插入图片描述"><br>      <strong>*图例：（看&amp;p[9]和&amp;p[10]等地址相差为4个字节，即它们是相连的，所以为一维数组）</strong></p>
+<p>&emsp;&emsp;&emsp;<strong>参考资料：</strong><br>&emsp;&emsp;&emsp;&emsp;<a href="https://blog.csdn.net/yc2zgh1314/article/details/51447114" target="_blank" rel="noopener">【转载于 ycz_csdn】C++中如何正确的开辟一个动态的二维数组</a><br><br><br><strong>参考资料：</strong><br><a href="https://baike.baidu.com/item/%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/215098?fr=aladdin" target="_blank" rel="noopener">【百度百科】杨辉三角</a><br><a href="https://blog.csdn.net/coolsunxu/article/details/71750795" target="_blank" rel="noopener">【coolsunxu】C++编写杨辉三角</a><br><a href="https://baijiahao.baidu.com/s?id=1607063654204393620&wfr=spider&for=pc" target="_blank" rel="noopener">【数学之美】杨辉三角(帕斯卡三角)的奇特性质</a><br><a href="https://jingyan.baidu.com/article/63acb44ac60d4e61fcc17e2e.html" target="_blank" rel="noopener">【百度经验】用例子理解排列组合及基本公式如何计算</a></p>
+<br>
+
+<h1 id="④、宏"><a href="#④、宏" class="headerlink" title="④、宏"></a>④、宏</h1><p> &emsp;宏（英语：Macro），是一种批量处理的称谓。<br>  &emsp;#define是C语言中提供的宏定义命令，其主要目的是为程序员在编程时提供一定的方便，并能在一定程度上提高程序的运行效率。<br><img src="https://img-blog.csdnimg.cn/20190827163156336.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="宏定义"><br><strong>命令格式：</strong><br>(1)、简单的宏定义：</p>
+<pre><code>#define &lt;宏名&gt;　　&lt;字符串&gt;
+例： #define PI 3.1415926</code></pre><p>(2)、带参数的宏定义</p>
+<pre><code>#define &lt;宏名&gt; (&lt;参数表&gt;) &lt;宏体&gt;
+例： #define A(x) x
+
+    一个标识符被宏定义后，该标识符便是一个宏名。
+    这时，在程序中出现的是宏名，在该程序被编译前，先将宏名用被定义的字符串替换，这称为宏替换，
+    替换后才进行编译，宏替换是简单的替换。</code></pre><br>
+
+<p><strong>宏替换发生的时机：</strong><br> &emsp;当我们在一个集成的开发环境如Turbo C中将编写好的源程序进行编译时，实际经过了预处理、编译、汇编和连接几个过程。其中预处理器产生编译器的输出，它实现以下的功能：<br><strong>（1）文件包含</strong><br>    &emsp; 可以把源程序中的#include 扩展为文件正文，即把包含的.h文件找到并展开到#include 所在处。<br><strong>（2）条件编译</strong><br>    &emsp; 预处理器根据#if和#ifdef等编译命令及其后的条件，将源程序中的某部分包含进来或排除在外，通常把排除在外的语句转换成空行。<br><strong>（3）宏展开</strong><br>    &emsp; 预处理器将源程序文件中出现的对宏的引用展开成相应的宏 定义，即本文所说的#define的功能，由预处理器来完成。<br>     &emsp;经过预处理器处理的源程序与之前的源程序有所有不同，在这个阶段所进行的工作只是纯粹的替换与展开，没有任何计算功能，所以在学习#define命令时只要能真正理解这一点，这样才不会对此命令引起误解并误用。</p>
+<p>&emsp;<strong>PS4：Turbo C：</strong><br>&emsp;&emsp;Turbo C是美国Borland公司的产品，Borland公司是一家专门从事软件开发、研制的大公司。该公司相继推出了一套 Turbo系列软件, 如Turbo BASIC, Turbo Pascal, Turbo Prolog，主要用于C语言编译。<br><img src="https://img-blog.csdnimg.cn/20190827172204382.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="界面展示"></p>
+<p><strong>参考资料：</strong><br><a href="https://www.cnblogs.com/fnlingnzb-learner/p/6903966.html" target="_blank" rel="noopener">【博客园Boblim】C++宏定义详解</a><br><a href="https://blog.csdn.net/cn_wk/article/details/55215730" target="_blank" rel="noopener">【王珂的个人笔记】C++中的宏定义</a></p>
+<br>
+
+<h1 id="⑤、C语言关键字auto、static、typedef、volatile、enum、const"><a href="#⑤、C语言关键字auto、static、typedef、volatile、enum、const" class="headerlink" title="⑤、C语言关键字auto、static、typedef、volatile、enum、const"></a>⑤、C语言关键字auto、static、typedef、volatile、enum、const</h1><p>&emsp;<strong>关键字，又叫保留字，是编译器能识别的特殊单词，每种计算机语言都会有其特定的关键字，C语言中有</strong>32<strong>位关键字。</strong></p>
+<p><strong>关键字分类</strong></p>
+<p>32个关键字每个都有不同的意义，大体上根据其意义可以分为以下几类（下划线表示不同分类中有交集）：<br>&emsp;1)非常见：auto、register、volatile、goto<br>&emsp;2)存储相关：const、extern、register、volatile、static、auto、signed、unsigned<br>&emsp;3)数据类型：char、short、int、float、long、double、struct、union、enum、void<br>&emsp;4)逻辑控制：if、else、for、while、do、break、continue、return、default、switch、case、goto<br>&emsp;5)特殊用途：sizeof、typedef</p>
+<p><strong>(1).auto</strong> <strong>自动变量</strong><br>　　这个关键字用于声明变量的生存期为自动，即将不在任何类、结构、枚举、联合和函数中定义的变量视为全局变量，而在函数中定义的变量视为局部变量。这个关键字不怎么多写，因为所有的变量默认就是auto的。<br>　　<br><strong>eg:</strong><br><img src="https://img-blog.csdnimg.cn/20190827173643544.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="auto效果展示"><br><strong>(2).static</strong><br>&emsp;1).static全局变量<br> &emsp;当一个进程的全局变量被声明为static之后，它的中文名叫<strong>静态全局变量</strong>。静态全局变量和其他的全局变量的存储地点并没有区别，都是在.data段（已初始化）或者.bss段（未初始化）内，<strong><em>但是它只在定义它的源文件内有效，其他源文件无法访问它</em></strong>。所以，普通全局变量穿上static外衣后，它就变成了新娘，已心有所属，只能被定义它的源文件（新郎）中的变量或函数访问。</p>
+<p>&emsp;2).static局部变量</p>
+<p>&emsp;3).static函数<br>&emsp;C语言中的“private函数”，它就是接下来要说的static函数，完成面向对象编程中private函数的功能。</p>
+<br>
+
+<p><strong>中兴通讯2012校招笔试题的一道问答题：</strong></p>
+<ol>
+<li><p>static全局变量与普通的全局变量有什么区别 ?<br>&emsp;全局变量(外部变量)的说明之前再冠以static 就构成了静态的全局变量。<br>&emsp;全局变量本身就是静态存储方式， 静态全局变量当然也是静态存储方式。 这两者在存储方式上并无不同。<br>&emsp;这两者的区别在于非静态全局变量的作用域是整个源程序， 当一个源程序由多个源文件组成时，非静态的全局变量在各个源文件中都是有效的。 而静态全局变量则限制了其作用域， 即只在定义该变量的源文件内有效， 在同一源程序的其它源文件中不能使用它。由于静态全局变量的作用域局限于一个源文件内，只能为该源文件内的函数公用，因此可以避免在其它源文件中引起错误。<br>&emsp;static全局变量只初使化一次，防止在其他文件单元中被引用; 　</p>
+</li>
+<li><p>static局部变量和普通局部变量有什么区别 ？<br>&emsp;&emsp;把局部变量改变为静态变量后是改变了它的存储方式即改变了它的生存期。把全局变量改变为静态变量后是改变了它的作用域，限制了它的使用范围。<br>&emsp;&emsp;static局部变量只被初始化一次，下一次依据上一次结果值； 　</p>
+</li>
+<li><p>static函数与普通函数有什么区别？<br>　　static函数与普通函数作用域不同,仅在本文件。只在当前源文件中使用的函数应该说明为内部函数(static修饰的函数)，内部函数应该在当前源文件中说明和定义。对于可在当前源文件以外使用的函数，应该在一个头文件中说明，要使用这些函数的源文件要包含这个头文件.</p>
+</li>
+</ol>
+<p><strong>(3).typedef</strong><br>　　 C 语言提供了 typedef 关键字，可以使用它来为类型取一个新的名字。<br>　　 <img src="https://img-blog.csdnimg.cn/20190827180244908.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="单字节类型"><br>　　 <img src="https://img-blog.csdnimg.cn/20190827180306395.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="结构体"><br>&emsp;<strong>typedef 与 #define 的区别</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/20190827180416477.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="区别"><br><strong>(4).volaatile</strong><br>&emsp;volatile关键字是一种类型修饰符，<strong>用它声明的类型变量表示可以被某些编译器未知的因素更改</strong>，比如：操作系统、硬件或者其它线程等。遇到这个关键字声明的变量，编译器对访问该变量的代码就不再进行优化，从而可以提供对特殊地址的稳定访问。</p>
+<p><strong>(5).enum</strong><br>    &emsp;关键字用于声明<strong>枚举</strong>，一种包含一组被称为枚举数列表的已命名常数的不同类型。<br><img src="https://img-blog.csdnimg.cn/20190827181352535.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>(6).const</strong><br>     &emsp;const意味着只读，凡是修改了const不允许修改的东西，编译器报错.<br>     &emsp;C语言中不是有#define吗，干嘛还要用const呢?<br>          &emsp;<strong>参考资料解答</strong></p>
+<p><strong>(7).extern</strong><br>&emsp;extern 意为“外来的”···它的作用在于告诉编译器：有这个变量，它可能不存在当前的文件中，但它肯定要存在于工程中的某一个源文件中或者一个Dll的输出中。</p>
+<p><strong>参考资料：</strong><br><a href="https://blog.csdn.net/u011625768/article/details/46723133" target="_blank" rel="noopener">【Mind语】C语言关键字auto与register的深入理解</a><br><a href="https://www.cnblogs.com/candyming/archive/2011/11/25/2262826.html" target="_blank" rel="noopener">【cnblogs】C语言中关键字auto、static、register、const、volatile、extern的作用</a><br><a href="https://blog.csdn.net/tr_ainiyangyang/article/details/80965574" target="_blank" rel="noopener">【Mr.TangR】C语言中static关键字的作用详解</a><br><a href="https://blog.csdn.net/keyeagle/article/details/6708077" target="_blank" rel="noopener">【keyeagle】C语言中的static 详细分析</a><br><a href="https://blog.csdn.net/qq_25579889/article/details/62038062" target="_blank" rel="noopener">【Shuai_Xie】C语言中typedef关键字的作用</a><br><a href="https://blog.csdn.net/littletigerat/article/details/6439413" target="_blank" rel="noopener">【littletigerat】面试点：解读关键字volatile(C语言面试题分析之一)</a><br><a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/enum" target="_blank" rel="noopener">【Microsoft】enum（C# 参考）</a><br><a href="https://blog.csdn.net/null959_/article/details/80563227" target="_blank" rel="noopener">【Null959_】C语言之const关键字总结</a><br><a href="https://blog.csdn.net/xingjiarong/article/details/47282255" target="_blank" rel="noopener">【xingjiarong】C语言中const关键字的用法</a></p>
+<h1 id="⑥、冯·诺依曼计算机的特点"><a href="#⑥、冯·诺依曼计算机的特点" class="headerlink" title="⑥、冯·诺依曼计算机的特点"></a>⑥、冯·诺依曼计算机的特点</h1><ul>
+<li><p>计算机由运算器、存储器、控制器、输入设备和输出设备五大部件组成。</p>
+</li>
+<li><p>指令和数据以同等地位存放于存储器内，并可按地址寻访。</p>
+</li>
+<li><p>指令和数据均用二进制数表示。</p>
+</li>
+<li><p><strong>（指令由操作码和地址码组成）</strong>，操作码用来表示操作的性质，地址码用来表示操作数在存储器中的位置。</p>
+</li>
+<li><p>指令在存储器内按顺序存放。通常，指令是顺序执行的，在特定条件下，可根据运算结果或根据设定的条件改变执行顺序。<strong>（存储程序）</strong></p>
+</li>
+<li><p><strong>（机器以运算器为中心）</strong>，输入输出设备与存储器间的数据传送通过运算器完成。</p>
+<br>
+
+</li>
+</ul>
+<h1 id="⑦、计算机五大部件的功能"><a href="#⑦、计算机五大部件的功能" class="headerlink" title="⑦、计算机五大部件的功能"></a>⑦、计算机五大部件的功能</h1><p><img src="https://img-blog.csdnimg.cn/20190827183306409.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="计算机的硬件框图"></p>
+<ul>
+<li>运算器用来完成算术运算和逻辑运算，并将运算的中间结果暂存在运算器内。<strong>（ALU）</strong></li>
+<li>存储器用来存放数据和程序。</li>
+<li>控制器用来控制、指挥程序和数据的输入、运行以及处理运算结果。<strong>(CU)</strong></li>
+<li>输入设备用来将人们熟悉的信息形式转换为机器能识别的信息形式，常见的有键盘、鼠标等。</li>
+<li>输出设备可将机器运算结果转换为人们熟悉的信息形式，如打印机输出、显示器输出等。<br><img src="https://img-blog.csdnimg.cn/20190827194732292.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="组成框图"></li>
+</ul>
+<h1 id="⑧、ACC"><a href="#⑧、ACC" class="headerlink" title="⑧、ACC"></a>⑧、ACC</h1><p>&emsp;&emsp;ACC——Accumulator，累加器，运算器中运算前存放操作数、运算后存放运算结果的寄存器;</p>
+<p><strong>PS5:</strong><br><img src="https://img-blog.csdnimg.cn/20190827195038448.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="补充图"></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Lazytom</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://yoursite.com/2019/09/04/first_blog/">http://yoursite.com/2019/09/04/first_blog/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/09/04/second_blog/">2019/8/28 日常学习的一天</a>
+            
+            
+            <a class="next" rel="next" href="/2019/09/03/hello-world/">Hello World</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Lazytom | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>

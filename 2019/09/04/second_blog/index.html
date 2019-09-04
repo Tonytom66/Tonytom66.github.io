@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+<title>2019/8/28 日常学习的一天 | Freespace</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Lazytom&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Lazytom&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+        <div class="main">
+            <div class="container">
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">2019/8/28 日常学习的一天</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">Lazytom</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">September 4, 2019&nbsp;&nbsp;22:19:05</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>@<a href="目录">TOC</a></p>
+<h1 id="①、缓冲池"><a href="#①、缓冲池" class="headerlink" title="①、缓冲池"></a>①、缓冲池</h1><p>&emsp;缓冲技术是为了协调吞吐速度相差很大的设备之间数据传送而采用的技术。<br>&emsp;为了缓和CPU和I/O设备速度不匹配的矛盾，提高CPU和I/O设备的并行性，在现代操作系统中，几乎所有的I/O设备在与处理机交换数据时都用了缓冲区，并提供获得和释放缓冲区的手段。总结来说，缓冲区技术用到了缓冲区，而缓冲区的引入是为了缓和CPU和I/O设备的不匹配，减少对CPU的中断频率，提高CPU和I/O设备的并行性。</p>
+<p><strong>在操作系统中，引入缓冲的主要原因:</strong></p>
+<ol>
+<li>改善CPU与I/O设备间速度不匹配的矛盾</li>
+<li>可以减少对 CPU的中断频率，放宽对中断响应时间的限制</li>
+<li>提高 CPU和 I/O设备之间的并行性</li>
+</ol>
+<p>&emsp;缓冲池：把多个缓冲区连接起来统一管理，既可用于输入又可用于输出的缓冲结构。<br>&emsp;<strong>缓冲池由多个缓冲区组成。</strong><br>&emsp;而一个缓冲区由两部分组成：一部分是用来标识该缓冲器和用于管理的缓冲首部，另一部分是用于存放数据的缓冲体。这两部分有一一对应的映射关系。对缓冲池的管理是通过对每一个缓冲器的缓冲首部进行操作实现的。<br>&emsp;缓冲首部包括设备号、设备上的数据块号（块设备时）、互斥标识位以及缓冲队列连接指针和缓冲器号等。</p>
+<p><strong>参考资料</strong><br><a href="https://baike.baidu.com/item/%E7%BC%93%E5%86%B2%E6%8A%80%E6%9C%AF/1937843?fr=aladdin" target="_blank" rel="noopener">【百度百科】缓冲技术</a><br><br></p>
+<h1 id="②、八大软件开发方法"><a href="#②、八大软件开发方法" class="headerlink" title="②、八大软件开发方法"></a>②、八大软件开发方法</h1><p> <strong>1. Parnas方法（信息隐藏原则）</strong><br>&emsp;主要针对可维护性和可靠性<br>&emsp;首先，Parnas提出了信息隐蔽原则：在概要设计时列出将来可能发生变化的因素，并在模块划分时将这些因素放到个别模块的内部。这样，在将来由于这些因素变化而需修改软件时，只需修改这些个别的模块，其它模块不受影响。<br>&emsp;Parnas提出的第二条原则是在软件设计时应对可能发生的种种意外故障采取措施。如在分配使用设备前，应该取设备状态字，检查设备是否正常。此外，模块之间也要加强检查，防止错误蔓延。Parnas对软件开发提出了深刻的见解。遗憾的是，他没有给出明确的工作流程。所以这一方法不能独立使用，只能作为其它方法的补充。</p>
+<p><strong>2.SASD方法 （结构化方法）</strong><br>&emsp;可称为面向功能的软件开发方法或面向数据流的软件开发方法。<br>&emsp;Yourdon方法是80年代使用最广泛的软件开发方法。它首先用结构化分析（SA）对软件进行需求分析，然后用结构化设计（SD）方法进行总体设计，最后是结构化编程（SP）。</p>
+<p>&emsp;结构化分析<br>&emsp;是根据分解与抽象的原则，按照系统中数据处理的流程，用数据流图来建立系统的功能模型，从而完成需求分析工作。</p>
+<p>&emsp;结构化设计<br>&emsp;根据模块独立性准则、软件结构优化准则将数据流图转换为软件的体系结构，用软件结构图来建立系统的物理模型，实现系统的概要设计。</p>
+<p>&emsp;结构化程序设计<br>&emsp;使用3种基本控制结构构造程序，任何程序都可以由顺序、选择和重复3种基本控制结构构造。</p>
+<p>&emsp;结构化方法总的指导思想是自顶向下、逐层分解，它的基本原则是功能的分解与抽象。适合于数据处理领域的问题，不适合解决大规模的、特别复杂的项目，且难以适应需求的变化。</p>
+<p><strong>3.面向数据结构的软件开发方法</strong><br>&emsp;<strong>Jackson方法</strong><br>&emsp;这一方法从目标系统的输入、输出数据结构入手，导出程序框架结构，再补充其它细节，就可得到完整的程序结构图。这一方法对输入、输出数据结构明确的中小型系统特别有效，如商业应用中的文件表格处理。该方法也可与其它方法结合，用于模块的详细设计。<br>&emsp;Jackson方法有时也称为面向数据结构的软件设计方法。</p>
+<p>&emsp;<strong>Warnier方法</strong><br>&emsp;Warnier提出的软件开发方法与Jackson方法类似。差别有三点：一是它们使用的图形工具不同，分别使用Warnier图和Jackson图；另一个差别是使用的伪码不同；最主要的差别是在构造程序框架时，Warnier方法仅考虑输入数据结构，而Jackson方法不仅考虑输入数据结构，而且还考虑输出数据结构。</p>
+<p><strong>4.问题分析法</strong><br>&emsp;PAM问题分析法。PAM（Problem Analysis Method）<br>&emsp;它的基本思想是：考虑到输入、输出数据结构，指导系统的分解，在系统分析指导下逐步综合。这一方法的具体步骤是：<br>从输入、输出数据结构导出基本处理框；分析这些处理框之间的先后关系； 按先后关系逐步综合处理框，直到画出整个系统的PAD图。 　从上述步骤中可以看出，这一方法本质上是综合的自底向上的方法，但在逐步综合之前已进行了有目的的分解，这个目的就是充分考虑系统的输入、输出数据结构。<br>&emsp;PAM方法的另一个优点是使用PAD图。这是一种二维树形结构图，是到目前为止最好的详细设计表示方法之一，远远优于NS图和PDL语言。</p>
+<p><strong>5.面向对象的软件开发方法</strong><br>&emsp;随着OOP（面向对象编程）向OOD（面向对象设计）和OOA（面向对象分析）的发展，最终形成面向对象的软件开发方法OMT(Object Modelling Technique）。这是一种自底向上和自顶向下相结合的方法，而且它以对象建模为基础，从而不仅考虑了输入、输出数据结构，实际上也包含了所有对象的数据结构。所以OMT彻底实现了PAM没有完全实现的目标。不仅如此，OO技术在需求分析、可维护性和可靠性这三个软件开发的关键环节和质量指标上有了实质性的突破，彻底地解决了在这些方面存在的严重问题，从而宣告了软件危机末日的来临。</p>
+<p><strong>6.可视化开发方法</strong><br>&emsp;可视化开发就是在可视开发工具提供的图形用户界面上，通过操作界面元素，诸如菜单、按钮、对话框、编辑框、单选框、复选框、列表框和滚动条等，由可视开发工具自动生成应用软件。<br>&emsp;这类应用软件的工作方式是事件驱动。对每一事件，由系统产生相应的消息，再传递给相应的消息响应函数。这些消息响应函数是由可视开发工具在生成软件时自动装入的。</p>
+<p><strong>7.ICASE</strong><br>&emsp;ICASE的进一步发展则是与其它软件开发方法的结合，如与面向对象技术、软件重用技术结合，以及智能化的I-CASE。近几年已出现了能实现全自动软件开发的ICASE。<br>&emsp;ICASE的最终目标是实现应用软件的全自动开发，即开发人员只要写好软件的需求规格说明书，软件开发环境就自动完成从需求分析开始的所有的软件开发工作，自动生成供用户直接使用的软件及有关文档。</p>
+<p><strong>8.软件重用和组件连接</strong><br>&emsp;软件重用（Reuse）又称软件复用或软件再用。软件人工制品可以是源代码片断、子系统的设计结构、模块的详细设计、文档和某一方面的规范说明等。所以软件重用是利用已有的软件成份来构造新的软件。它可以大大减少软件开发所需的费用和时间，且有利于提高软件的可维护性和可靠性。</p>
+<p><strong>参考资料</strong><br><a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95/971447?fr=aladdin" target="_blank" rel="noopener">【百度百科】软件开发方法</a></p>
+<h1 id="③、动态链接库"><a href="#③、动态链接库" class="headerlink" title="③、动态链接库"></a>③、动态链接库</h1><p><img src="https://img-blog.csdnimg.cn/20190828194718944.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="动态链接库"><br>&emsp;动态链接库（Dynamic Link Library 或者 Dynamic-link Library，缩写为 DLL），是微软公司在微软Windows操作系统中，实现共享函数库概念的一种方式。这些库函数的扩展名是 ”.dll”、”.ocx”（包含ActiveX控制的库）或者 “.drv”（旧式的系统驱动程序）。<br>&emsp;动态链接提供了一种方法，使进程可以调用不属于其可执行代码的函数。函数的可执行代码位于一个 DLL 文件中，该 DLL 包含一个或多个已被编译、链接并与使用它们的进程分开存储的函数。DLL 还有助于共享数据和资源。多个应用程序可同时访问内存中单个 DLL 副本的内容。<br>&emsp;<strong>更多详情</strong><a href="https://blog.csdn.net/yl_best/article/details/82914251" target="_blank" rel="noopener">【独步天秤】C/C++动态链接库（DLL）详解</a></p>
+<p><strong>参考资料</strong><br><a href="https://baike.baidu.com/item/%E5%8A%A8%E6%80%81%E9%93%BE%E6%8E%A5%E5%BA%93/100352?fr=aladdin" target="_blank" rel="noopener">【百度百科】动态链接库</a></p>
+<h1 id="④、smalltalk"><a href="#④、smalltalk" class="headerlink" title="④、smalltalk"></a>④、smalltalk</h1><p><img src="https://img-blog.csdnimg.cn/20190828195737223.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="Alan kay"><br>&emsp;Smalltalk被公认为历史上第二个面向对象的程序设计语言和第一个真正的集成开发环境 (IDE)。<br>&emsp;Smalltalk和许多程序设计语言不同，它不仅仅是一门语言。</p>
+<p>&emsp; <strong>一种面向对象的程序设计语言</strong>：它是一种面向对象的语言，包含语言的语法和语义。一些编译器可以通过Smalltalk源程序产生可执行文件。这些编译器通常产生一种能在虚拟机上运行的二进制代码。Smalltalk语言本身非常精炼。<br>&emsp;<strong>一种程序设计环境</strong>：这里指的是一种提供许多 对象 的系统，而不是某种特殊的开发环境。和许多语言不同(包括C++)，Smalltalk附带有一个巨大的、相当标准的类库。这些 类 使得开发Smalltalk程序的效率非常高。在其它语言（例如 Ada ， C 和 Pascal ）中通常被作为语言的一部分的功能（例如条件判断，循环等)，在Smalltalk由特定的类提供。<br>&emsp;<strong>一个应用开发环境(ADE)</strong>：由于Smalltalk的历史原因，它具有一个非常优秀的高度集成、开放的应用开发环境。由于开发环境中的浏览器、监视器以及调试器都由同样的源程序衍生出来的，不同的版本之间也具有相当好的兼容性。此外，这些工具的源程序都可以在ADE直接存取。</p>
+<h1 id="⑤、Dynabook"><a href="#⑤、Dynabook" class="headerlink" title="⑤、Dynabook"></a>⑤、Dynabook</h1><p>&emsp; Dynabook，是艾伦·凯于1968年所提出的电子书的概念，Alan Kay 想像这是一台可以带着跑的电脑。<br><br></p>
+<h1 id="⑥、存储器、运算器和控制器的结构"><a href="#⑥、存储器、运算器和控制器的结构" class="headerlink" title="⑥、存储器、运算器和控制器的结构"></a>⑥、存储器、运算器和控制器的结构</h1><p><img src="https://img-blog.csdnimg.cn/20190828200453600.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="计算机组成框图"></p>
+<h1 id="⑦、计算机工作过程"><a href="#⑦、计算机工作过程" class="headerlink" title="⑦、计算机工作过程"></a>⑦、计算机工作过程</h1><p><strong>以取数指令为例</strong><br><img src="https://img-blog.csdnimg.cn/20190828201035468.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDcxNzU0,size_16,color_FFFFFF,t_70" alt="取数指令图"><br>&emsp;启动机器，首先 PC ( 程序计数器 ) 存放的是一条指令的地址，对于这条指令指令送到存储器的 MAR ( 地址寄存器 ) 中。并命令存储器执行读操作，然后将读取的内容送至MDR ( 数据寄存器 ) 。然后MDR 讲指令送到 IR ( 指令寄存器 ) 中。这里就完成了获取指令。( 1-4 )</p>
+<p>&emsp;IR存放当前指令，然后指令由 IR 送到 CU 控制单元，CU进行分析，该指令进行什么操作。然后获取指令的地址码，获取数据的地址码，这里完成了分析指令。( 5 )</p>
+<p>&emsp;IR 将地址码送至存储器 MAR，MAR进入存储体读取数据，然后送至 MDR，再由MDR送至运算器。这里就完成了执行指令。</p>
+<p>&emsp;接着PC=PC+1，读取下一条指令，继续上面的操作。直到获取停机指令，停止工作。</p>
+<p><strong>取指令：</strong> PC =&gt; MAR =&gt; M =&gt; MDR =&gt; IR<br><strong>分析指令：</strong> OP(IR) =&gt; CU<br><strong>执行指令：</strong> Ad(IR) =&gt; MAR =&gt; M =&gt; MDR =&gt; ACC </p>
+<p><strong>参考资料</strong><br><a href="https://blog.csdn.net/ak201605050122/article/details/81084623" target="_blank" rel="noopener">【Robin_yy】计算机五大组成部件和工作过程</a></p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>Lazytom</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="http://yoursite.com/2019/09/04/second_blog/">http://yoursite.com/2019/09/04/second_blog/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY<strong>?</strong></strong></span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2019/09/04/three_blog/">2019/8/29 日常学习的一天</a>
+            
+            
+            <a class="next" rel="next" href="/2019/09/04/first_blog/">2019/8/26 日常学习的一天</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+        </div>
+        <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© Lazytom | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+</html>
